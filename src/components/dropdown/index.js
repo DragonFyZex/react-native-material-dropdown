@@ -755,7 +755,7 @@ export default class Dropdown extends PureComponent {
                 renderItem={this.renderItem}
                 keyExtractor={this.keyExtractor}
                 scrollEnabled={visibleItemCount < itemCount}
-                contentContainerStyle={styles.scrollContainer}
+                contentContainerStyle={[styles.scrollContainer, {backgroundColor: this.props.pickerColor}]}
               />
             </View>
           </Animated.View>
