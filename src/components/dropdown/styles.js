@@ -33,20 +33,20 @@ export default StyleSheet.create({
 
   picker: {
     backgroundColor: 'rgba(255, 255, 255, 1.0)',
-    borderRadius: 2,
+    borderRadius: 0,
 
     position: 'absolute',
 
     ...Platform.select({
       ios: {
-        shadowRadius: 2,
+        shadowRadius: 0,
         shadowColor: 'rgba(0, 0, 0, 1.0)',
         shadowOpacity: 0.54,
         shadowOffset: { width: 0, height: 2 },
       },
 
       android: {
-        elevation: 2,
+        elevation: 0,
       },
     }),
   },
