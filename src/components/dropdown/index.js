@@ -482,6 +482,7 @@ export default class Dropdown extends PureComponent {
       labelExtractor,
       dropdownOffset,
       renderAccessory = this.renderAccessory,
+      lineColor
     } = this.props;
 
     let index = this.selectedIndex();
@@ -501,7 +502,7 @@ export default class Dropdown extends PureComponent {
 
     title = null == title || 'string' === typeof title?
       title:
-      String(title);
+      String('title');
 
     return (
       <TextField
@@ -509,7 +510,8 @@ export default class Dropdown extends PureComponent {
         labelHeight={dropdownOffset.top - Platform.select({ ios: 1, android: 2 })}
 
         {...props}
-
+        baseColor = {lineColor}
+        lineWidth = {2}
         value={title}
         editable={false}
         onChangeText={undefined}
@@ -554,7 +556,7 @@ export default class Dropdown extends PureComponent {
     let triangleStyle = { backgroundColor };
 
     return (
-      <View style={styles.accessory}>
+      <View style={[styles.accessory]}>
         <View style={styles.triangleContainer}>
           <View style={[styles.triangle, triangleStyle]} />
         </View>
